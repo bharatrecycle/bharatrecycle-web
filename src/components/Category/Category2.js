@@ -35,10 +35,12 @@ const CategoryPage2 = () => {
         <div className="footer-content2">
       <div className="youtube-thumbnails">
         {youtubeVideos.map((video, index) => (
-          <a key={index} href={video.url} target="_blank" rel="noopener noreferrer">
+          <div key={index} className="youtube-video">
             <img src={video.thumbnail} alt={`YouTube video ${index + 1}`} />
-            <p className="youtube-p">{video.url}</p>
-          </a>
+            <button onClick={() => window.open(video.url, '_blank')} className="watch-now-btn">
+            Watch Now
+          </button>
+          </div>
         ))}
         </div>
       </div>
