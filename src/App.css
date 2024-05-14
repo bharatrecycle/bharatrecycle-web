@@ -1,3 +1,14 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Ensure the body takes the full height */
+  width: 100%;
+  overflow: auto;
+  /* Ensure the body takes the full width */
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -5,31 +16,182 @@
   min-height: 100vh;
 }
 
-.background {
-  position: fixed;
-  /* Fixed or absolute, so it doesn't affect document flow */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('assets/background-ai.jpg');
-  z-index: -1;
-  /* Replace with your actual background image URL */
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  margin-bottom: 20px;
+}
+
+.side {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.image {
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.menu-item {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.menu-toggle {
+  align-self: flex-start;
+  margin: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.logo-item {
+  text-align: center;
+  margin: 10px;
+  /* Adjust as needed */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -8px;
+  top: 100%;
+  background-color: #373a47;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-content .dropdown-item {
+  margin-bottom: 4px;
+  padding: 10px;
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.dropdown-icon {
+  font-size: 14px;
+  font-weight: 400;
+  /* Adjust the size as needed */
+  margin-left: 5px;
+  /* Adjust the margin as needed */
+}
+
+.dropdown-content .dropdown-item a {
+  color: #d1d1d1;
+  text-decoration: none;
+}
+
+.dropdown-content .dropdown-item a:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 25px;
+  height: 20px;
+  left: 20px;
+  /* Adjust as needed */
+  top: 40px;
+  /* Adjust as needed */
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+.bm-cross-button {
+  height: 28px;
+  width: 28px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  width: 250px;
+  height: 100%;
+  /* Ensure the menu takes full height */
+  /* Set a fixed width */
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+  color: #d1d1d1;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
 
 /* Home */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 25px;
   padding-right: 30px;
-  height: 60px
+  height: 50px
 }
 
 .logo {
-  width: 120px;
+  width: 100px;
   /* Adjust based on your logo size */
   height: auto;
 }
@@ -62,15 +224,29 @@
   cursor: pointer
 }
 
-.category-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+.image-home {
+  width: 280px;
+  height: 220px;
   object-fit: cover;
-  margin-bottom: 4px;
+  cursor: pointer;
+  border-radius: 20%;
 }
 
+.image-category {
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20%;
+}
+
+
 .category p {
+  margin-top: -2px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.text-home {
   margin-top: 0;
   font-weight: 600;
   font-size: 24px;
@@ -208,13 +384,81 @@
   margin-top: 10px;
 }
 
+.about-container {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 0px;
+}
+
+.about-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
 .footer-content2 {
   width: 100%;
   display: flex;
+  margin-top: 15px;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
 
 }
+
+/* AchievementsPage.css */
+
+.achievements-page {
+  padding: 20px;
+  margin: 20px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.achievements-page h1 {
+  font-size: 2.5em;
+  margin-top: -20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.achievement-item {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.achievement-image {
+  margin-right: 20px;
+  border-radius: 10%;
+}
+
+.achievement-image img {
+  width: 200px;
+  height: 140px;
+  border-radius: 10%;
+
+}
+
+.achievement-description {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.achievement-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
 
 .youtube-thumbnails {
   margin-top: 5px;
@@ -223,6 +467,10 @@
   border-radius: 10%;
   gap: 10%;
 
+}
+
+.link-video {
+  height: 170px;
 }
 
 
