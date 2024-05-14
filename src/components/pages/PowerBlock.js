@@ -26,7 +26,7 @@ const PowerBlock = () => {
          <Menu>
         <a className="menu-item" href="/">Home</a>
         <a className="menu-item" href="/about">About</a>
-        <a className="menu-item" href="/achievements">Services</a>
+        <a className="menu-item" href="/achievements">Achievements</a>
         <div className="menu-item dropdown">
             <p onClick={toggleDropdown} style={{color:"#d1d1d1"}}>
               Clients <FontAwesomeIcon icon={dropdownVisible ? faChevronUp : faChevronDown} className="dropdown-icon" />
