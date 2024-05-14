@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c572cfe6.css",
+    "main.js": "/static/js/main.c21d319c.js",
+    "static/media/powerBlock.jpg": "/static/media/powerBlock.3ec80c123cba87f8c78e.jpg",
+    "static/media/makeIndia.jpg": "/static/media/makeIndia.aa9e4c865aef403bec26.jpg",
+    "static/media/logo.png": "/static/media/logo.56d1a4012be48ad3ae3f.png",
+    "index.html": "/index.html",
+    "main.c572cfe6.css.map": "/static/css/main.c572cfe6.css.map",
+    "main.c21d319c.js.map": "/static/js/main.c21d319c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c572cfe6.css",
+    "static/js/main.c21d319c.js"
+  ]
+}
